@@ -16,10 +16,15 @@ public class Main {
         // Create context container
         ConfigurableApplicationContext context = new ClassPathXmlApplicationContext(CONFIG_LOCATION);
 
+        // Get numberGenerator bean from context
         NumberGenerator numberGenerator = context.getBean("numberGenerator", NumberGenerator.class);
 
         log.info("Max number : {}", numberGenerator.getMaxNumber());
         log.info("Next number : {}", numberGenerator.next());
+
+        // Get game bean from context
+        Game game = context.getBean(Game.class);
+        game.reset();
 
         // Close context container
         context.close();

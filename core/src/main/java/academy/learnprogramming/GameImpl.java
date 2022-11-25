@@ -18,7 +18,16 @@ public class GameImpl implements Game{
     private int remainingGuesses;
     private boolean validNumberRange = true;
 
+    // == Constructor ==
+    /*GameImpl(NumberGenerator numberGenerator){
+        this.numberGenerator = numberGenerator;
+    }*/
+
     // == Public methods ==
+    public void setNumberGenerator(NumberGenerator numberGenerator){
+        this.numberGenerator = numberGenerator;
+    }
+
     @Override
     public void reset() {
         smallest = 0;
