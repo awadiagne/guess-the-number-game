@@ -2,10 +2,12 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        https://www.springframework.org/schema/beans/spring-beans.xsd"
+    default-init-method="reset" default-destroy-method="destroy"
+>
 
     <bean id="numberGenerator" class="academy.learnprogramming.NumberGeneratorImpl"/>
-    <bean id="game" class="academy.learnprogramming.GameImpl" init-method="reset">
+    <bean id="game" class="academy.learnprogramming.GameImpl">
         <!-- Constructor-based injection
         <constructor-arg ref="numberGenerator"/>
         -->
