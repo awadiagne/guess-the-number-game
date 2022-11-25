@@ -5,7 +5,7 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="numberGenerator" class="academy.learnprogramming.NumberGeneratorImpl"/>
-    <bean id="game" class="academy.learnprogramming.GameImpl">
+    <bean id="game" class="academy.learnprogramming.GameImpl" init-method="reset">
         <!-- Constructor-based injection
         <constructor-arg ref="numberGenerator"/>
         -->
