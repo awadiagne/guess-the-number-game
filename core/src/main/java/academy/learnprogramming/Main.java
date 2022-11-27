@@ -17,7 +17,7 @@ public class Main {
         ConfigurableApplicationContext context = new ClassPathXmlApplicationContext(CONFIG_LOCATION);
 
         // Get numberGenerator bean from context
-        NumberGenerator numberGenerator = context.getBean("numberGenerator", NumberGenerator.class);
+        NumberGenerator numberGenerator = context.getBean(NumberGenerator.class);
 
         log.info("Max number : {}", numberGenerator.getMaxNumber());
         log.info("Next number : {}", numberGenerator.next());
