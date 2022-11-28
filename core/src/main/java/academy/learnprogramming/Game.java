@@ -16,6 +16,8 @@ public interface Game {
 
     int getRemainingGuesses();
 
+    int getGuessCount();
+
     void check();
 
     boolean isValidNumberRange();
